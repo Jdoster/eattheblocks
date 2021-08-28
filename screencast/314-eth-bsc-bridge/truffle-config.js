@@ -1,5 +1,5 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const mnemonic = '';
+const mnemonic = 'scare fly ozone toward odor oblige travel behave avoid toe head velvet';
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -63,7 +63,7 @@ module.exports = {
     ethTestnet: {
       provider: () => new HDWalletProvider(
         mnemonic, 
-        'Infura Rinkeby url';
+        'https://rinkeby.infura.io/v3/6eaf86c3bbff475aa5c433cbaf42fb40';
         0,
         1
       ),
@@ -73,9 +73,9 @@ module.exports = {
     bscTestnet: {
       provider: () => new HDWalletProvider(
         mnemonic, 
-        'https://data-seed-prebsc-1-s1.binance.org:8545'
+        'https://bsc-dataseed.binance.org'
       ),
-      network_id: 97,
+      network_id: 56,
       skipDryRun: true
     },
     // Useful for private networks
