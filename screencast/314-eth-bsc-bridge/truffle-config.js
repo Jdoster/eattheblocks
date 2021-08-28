@@ -70,7 +70,7 @@ module.exports = {
       network_id: 4, //rinkeby
       skipDryRun: true
     },
-    bscTestnet: {
+    bsc: {
       provider: () => new HDWalletProvider(
         mnemonic, 
         'https://bsc-dataseed.binance.org'
