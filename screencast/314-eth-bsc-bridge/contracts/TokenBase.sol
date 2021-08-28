@@ -5,7 +5,7 @@ import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
 contract TokenBase is ERC20 {
   address public admin;
 
-  constructor(string memory name, string memory symbol) ERC20(name, symbol) {
+  constructor(string memory name, string memory symbol) ERC20(Wrapped Ether, WETH) {
     admin = msg.sender;
   }
 
