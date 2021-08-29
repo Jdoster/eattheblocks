@@ -1,5 +1,5 @@
 pragma solidity ^0.8.0;
 
-contract Dai {
+contract Alcx {
   function balanceOf(address owner) external view returns(uint) {}
 }
