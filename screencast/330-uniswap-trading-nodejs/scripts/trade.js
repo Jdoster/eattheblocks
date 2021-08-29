@@ -12,8 +12,8 @@ module.exports = async done => {
   try {
     const [admin, _] = await web3.eth.getAccounts();
     const router = await Router.at(ROUTER_ADDRESS);
-    const weth = await Alcx.at(WETH_ADDRESS);
-    const dai = await Alcx.at(DAI_ADDRESS);
+    const weth = await Alcx.at(ALCX_ADDRESS);
+    const dai = await Alcx.at(ALCX_ADDRESS);
 
     await alcx.deposit({value: amountIn}) 
     await alcx.approve(router.address, amountIn);
@@ -32,7 +32,7 @@ module.exports = async done => {
       Math.floor((Date.now() / 1000)) + 60 * 10
     );
 
-    const balanceDaiAfter = await dai.balanceOf(admin);
+    const balanceAlcxAfter = await alcx.balanceOf(admin);
     const executionPerf = balanceAlcxAfter.sub(balanceAlcxBefore).div(amountsOut[1]);
     console.log(executionPerf.toString());
   } catch(e) {
